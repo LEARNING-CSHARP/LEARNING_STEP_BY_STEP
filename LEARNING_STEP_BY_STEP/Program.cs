@@ -557,47 +557,301 @@
 
 
 
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static int DoSomething(int x, int y)
+//		{
+//			//int result = ((x + y) - 1) * x - y * 10;
+//			int result = ((x + y) - 1) * x - y * 11;
+
+//			return result;
+//		}
+
+//		static void Main(string[] args)
+//		{
+//			int A = 10;
+//			int B = 20;
+
+//			int C = DoSomething(A, B);
+//			//int C = ((A + B) - 1) * A - B * 10;
+
+//			System.Console.WriteLine(C);
+
+//			//...
+
+//			int M = 22;
+//			int N = 17;
+
+//			int P = DoSomething(M, N);
+//			//int P = ((M + N) - 1) * M - N * 10;
+
+//			System.Console.WriteLine(P);
+
+//			//...
+
+//			int L = 22;
+//			int S = 17;
+
+//			int W = DoSomething(L, S);
+//			//int W = ((L + S) - 1) * L - S * 10;
+
+//			System.Console.WriteLine(P);
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			string result;
+
+//			int A = 10;
+//			int B = 20;
+
+//			result =
+//				$"A = { A } - B = { B }";
+
+//			System.Console.WriteLine(result);
+
+//			int C;
+
+//			C = A;
+//			A = B;
+//			B = C;
+
+//			result =
+//				$"A = { A } - B = { B }";
+
+//			System.Console.WriteLine(result);
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			string result;
+
+//			int A = 10;
+//			int B = 20;
+
+//			result =
+//				$"A = { A } - B = { B }";
+
+//			System.Console.WriteLine(result);
+
+//			A = A + B;
+//			B = A - B;
+//			A = A - B;
+
+//			result =
+//				$"A = { A } - B = { B }";
+
+//			System.Console.WriteLine(result);
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			int I = 1;
+
+//			System.Console.Write(I);
+
+//			int J = 1;
+
+//			System.Console.Write($", { J }");
+
+//			int K = I + J;
+
+//			while (K <= 100)
+//			{
+//				System.Console.Write($", { K }");
+
+//				I = J;
+//				J = K;
+//				K = I + J;
+//			}
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			int index = 0;
+
+//			int I = 1;
+//			index++;
+
+//			System.Console.WriteLine($"{ index }: { I }");
+
+//			int J = 1;
+//			index++;
+
+//			System.Console.WriteLine($"{ index }: { J }");
+
+//			int K = I + J;
+
+//			while (index < 20)
+//			{
+//				index++;
+
+//				System.Console.WriteLine($"{ index }: { K }");
+
+//				I = J;
+//				J = K;
+//				K = I + J;
+//			}
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
+//namespace LEARNING_STEP_BY_STEP
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			System.Console.Write("How many fibo numbers do you want? ");
+//			string countString = System.Console.ReadLine();
+//			int count = System.Convert.ToInt32(countString);
+
+//			int index = 0;
+
+//			int I = 1;
+//			index++;
+
+//			System.Console.WriteLine($"{ index }: { I }");
+
+//			int J = 1;
+//			index++;
+
+//			System.Console.WriteLine($"{ index }: { J }");
+
+//			int K = I + J;
+
+//			while (index < count)
+//			{
+//				index++;
+
+//				System.Console.WriteLine($"{ index }: { K }");
+
+//				I = J;
+//				J = K;
+//				K = I + J;
+//			}
+
+//			System.Console.Write
+//				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
+
+//			System.Console.ReadLine();
+//		}
+//	}
+//}
+
+
+
 namespace LEARNING_STEP_BY_STEP
 {
 	class Program
 	{
-		static int DoSomething(int x, int y)
+		static int GetRandomNumberBetween(int minValue, int maxValue)
 		{
-			//int result = ((x + y) - 1) * x - y * 10;
-			int result = ((x + y) - 1) * x - y * 11;
+			System.Random random =
+				new System.Random(Seed: System.DateTime.Now.Millisecond);
 
-			return result;
+			int randomNumber =
+				random.Next(minValue: minValue, maxValue: maxValue);
+
+			return randomNumber;
 		}
 
 		static void Main(string[] args)
 		{
-			int A = 10;
-			int B = 20;
+			System.Console.Write("What is you credit: ");
+			string creditString = System.Console.ReadLine();
+			int credit = System.Convert.ToInt32(creditString);
 
-			int C = DoSomething(A, B);
-			//int C = ((A + B) - 1) * A - B * 10;
+			int goal;
+			int los = 1;
+			int win = 8;
+			int sum = credit;
 
-			System.Console.WriteLine(C);
+			while (sum > 0)
+			{
+				goal =
+					GetRandomNumberBetween(minValue: 0, maxValue: 9);
 
-			//...
+				System.Console.Write("[GUESS]: ");
+				string guessString = System.Console.ReadLine();
+				int guess = System.Convert.ToInt32(guessString);
 
-			int M = 22;
-			int N = 17;
+				if (guess == goal)
+				{
+					sum += win;
 
-			int P = DoSomething(M, N);
-			//int P = ((M + N) - 1) * M - N * 10;
+					System.Console.WriteLine
+						($"You are a winner! You win: { win } - Credit: { sum }");
+				}
+				else
+				{
+					sum -= los;
 
-			System.Console.WriteLine(P);
-
-			//...
-
-			int L = 22;
-			int S = 17;
-
-			int W = DoSomething(L, S);
-			//int W = ((L + S) - 1) * L - S * 10;
-
-			System.Console.WriteLine(P);
+					System.Console.WriteLine
+						($"You are a loser! Answer: { goal } -  You Lose: { los } - Credit: { sum }");
+				}
+			}
 
 			System.Console.Write
 				(System.Environment.NewLine + "Press [ENTER] To Exit... ");
